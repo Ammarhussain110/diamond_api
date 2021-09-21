@@ -1,0 +1,10 @@
+{
+  "name": "diamond_api",
+  "version": "1.0.0",
+  "description": "This is the api for diamond sale purchasing online platform",
+  "scripts": {
+    "start": "nodem"
+  },
+  "author": "Tecjaunt",
+  "license": "ISC"
+}
