@@ -18,6 +18,7 @@ mongoose.connect(db, {
 }).then(() => {
     console.log("connection successfully!!");
 }).catch(err => {
+    console.log(err);
     console.log("connection failed!!")
 })
 
@@ -25,18 +26,5 @@ app.use(express.json());
 
 app.use("/api", router)
 
-// app.post("/register", function (req, res, next) {
-//     const user = req.body
-//     // console.log(process.env.MONGO_URI);
-//     const data = new User({
-//         username: user.username,
-//         email: user.email,
-//         password: user.password,
-//     })
-//     data.save()
-//     res.json({
-//         "name": data
-//     })
-// });
 
 module.exports = app;
