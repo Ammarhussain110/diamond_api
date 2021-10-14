@@ -1,0 +1,27 @@
+const router = require("express").Router()
+
+// const User = require("../model/user")
+// const bcrypt = require('bcrypt');
+
+// const jwt = require('jsonwebtoken');
+const { register, login, getUser } = require('../api/controller/auth')
+
+// register
+router.post('/register', register)
+
+
+// login 
+router.post('/login', login)
+router.get('/auth-user', getUser)
+router.post('/test', async (req, res) => {
+    try {
+        const data = await Product.findById(req.params.id)
+        res.status(200).json(data)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+}))
+
+
+
+module.exports = router
