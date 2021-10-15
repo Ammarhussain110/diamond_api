@@ -84,14 +84,7 @@ const login = async (req, res) => {
     }
 }
 const getUser = async (req, res) => {
-    try {
-        const data = await User.findOne({
-            userId: req.query.userId
-        })
-        res.status(200).json(data)
-    } catch (err) {
-        res.status(500).json(err)
-    }
+    res.status(500).json({ "message": "data test!!" })
 }
 module.exports = {
     register,

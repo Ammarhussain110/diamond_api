@@ -61,7 +61,7 @@ router.post('/', upload.any(), async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         const data = await AddToCart.find({
-            userId: req.query.userId
+            userId: req.
         }).sort({ _id: -1 })
         res.status(200).json(data)
     } catch (err) {

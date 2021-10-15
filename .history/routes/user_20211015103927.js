@@ -23,7 +23,7 @@ router.post('/:id', upload.single('dp'), async (req, res) => {
                 lastname: req.body.lastname,
                 address: req.body.address,
                 phone: req.body.phone,
-                dp: req.file ? `profileImages/${req.file.filename}` : req.body.dp
+                dp:  req.file? `profileImages/${req.file.filename}`: req.body.dp
             }
         }, { new: true })
         res.status(200).json({
