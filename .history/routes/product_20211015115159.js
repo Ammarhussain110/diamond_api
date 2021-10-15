@@ -68,12 +68,12 @@ router.post('/:id', upload.single('image'), async (req, res) => {
         }, { new: true })
         res.status(200).json({
             status: "success",
-            message: "Product updated successfully!!"
+            message: "Profile updated successfully!!"
         })
     } catch (err) {
         res.status(500).json({
             status: "failed",
-            message: "error occurred Product updated!!"
+            message: "error occurred profile updated!!"
         })
     }
 })
